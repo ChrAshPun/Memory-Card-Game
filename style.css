@@ -1,0 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.memory__page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 500px;
+  background-color: #4db6ac;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.memory-start-page {
+  z-index: 50;
+  padding-top: 120px;
+}
+
+#memory-start-button {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  font-size: 16px;
+  font-weight: 500;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 1px 5px 0px #696969;
+}
+
+#memory-start-button:hover {
+  transition: all 500ms;
+  background-color: #f5f5f5;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 5px 8px 0px #696969;
+}
+
+#memory__win-page {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 500px;
+  border-radius: 20px;
+  z-index: 100;
+}
+
+.memory__win-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 200px;
+  background-color: white;
+  border-radius: 20px;
+  line-height: 160px;
+  text-align: center;
+}
+
+#play-again-button {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 30px;
+  transform: translate(-50%, -30%);
+  box-shadow: 0px 1px 4px 0px #696969;
+}
+
+#play-again-button:hover {
+  transition: all 500ms;
+  transform: translate(-50%, -50%);
+  box-shadow: 0px 5px 7px 0px #696969;
+}
+
+.hidden {
+  display: none;
+}
+
+.memory-top-menu {
+  width: 600px;
+  height: 30px;
+  background-color: white;
+  line-height: 30px;
+  border-radius: 20px;
+  margin: 15px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+h3 {
+  display: inline-block;
+  width: 260px;
+}
+
+#memory__player-score,
+#memory__computer-score {
+  display: inline-block;
+  width: 30px;
+  background-color: white;
+}
+
+.memory__cards-area {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 800px;
+  height: 370px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+
+.memory__card-space {
+  width: 120px;
+  height: 180px;
+}
+
+.card-space {
+  width: 120px;
+  height: 170px;
+}
+
+.card {
+  position: relative;
+  width: 120px;
+  height: 170px;
+  background-color: #c0c0c0;
+  border-radius: 10px;
+  transition: all 1s;
+  transform-style: preserve-3d; /* sets whether children of an element are positioned in the 3D space or are flattened in the plane of the element */
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  cursor: pointer;
+}
+
+.card__face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.red__font-color {
+  color: #d9534f;
+}
+
+.red__front-design {
+  border: solid 2px #d9534f;
+}
+
+.black__front-design {
+  border: solid 2px #292b2c;
+}
+
+.card__face-front {
+  background-color: white;
+  transform: rotateY(180deg);
+}
+
+.card__face-front-topleft,
+.card__face-front-bottomright {
+  font-weight: 500;
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  margin: 5px;
+  text-align: center;
+  line-height: 30px;
+  z-index: 2;
+}
+
+.card__face-front-topleft {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card__face-front-bottomright {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: rotate(180deg);
+}
+
+.card__front-design {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85px;
+  height: 130px;
+}
+
+.card__face-back {
+  background-color: #d9534f;
+}
+
+.card__back-design {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 110px;
+  height: 160px;
+  background-color: #d9534f;
+  border: solid 10px white;
+  border-radius: 5px;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}

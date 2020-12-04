@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="memory__win-page" class="">
+      <div class="memory__win-container">
+        <h1 id="memory__win-message"></h1>
+        <button id="play-again-button" onclick="controller.init()">
+          Play Again
+        </button>
+      </div>
+    </div>
+    <div class="memory__page memory-start-page">
+      <h1>Memory Card Game</h1>
+      <button id="memory-start-button">Start</button>
+    </div>
+    <div class="memory__page memory-game-page">
+      <div class="memory-top-menu">
+        <h3>Player</h3>
+        <h3 id="memory__player-score">0</h3>
+        <div class="memory__score-divider"></div>
+        <h3 id="memory__computer-score">0</h3>
+        <h3>Computer</h3>
+      </div>
+      <div class="memory__cards-area">
+        <div class="card-space">
+          <div id="0" class="card" data-card-value="">
+            <div class="card__face card__face-front">
+              <div class="card__face-front-topleft"></div>
+              <div class="card__face-front-bottomright"></div>
+              <div class="card__front-design"></div>
+            </div>
+            <div class="card__face card__face-back">
+              <div class="card__back-design"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-space">
+          <div id="1" class="card" data-card-value="">
+            <div class="card__face card__face-front">
+              <div class="card__face-front-topleft"></div>
+              <div class="card__face-front-bottomright"></div>
+              <div class="card__front-design"></div>
+            </div>
+            <div class="card__face card__face-back">
+              <div class="card__back-design"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-space">
+          <div id="2" class="card" data-card-value="">
+            <div class="card__face card__face-front">
+              <div class="card__face-front-topleft"></div>
+              <div class="card__face-front-bottomright"></div>
+              <div class="card__front-design"></div>
+            </div>
+            <div class="card__face card__face-back">
+              <div class="card__back-design"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-space">
+          <div id="3" class="card" data-card-value="">
+            <div class="card__face card__face-front">
+              <div class="card__face-front-topleft"></div>
+              <div class="card__face-front-bottomright"></div>
+              <div class="card__front-design"></div>
+            </div>
+            <div class="card__face card__face-back">
+              <div class="card__back-design"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-space">
+          <div id="4" class="card" data-card-value="">
+            <div class="card__face card__face-front">
+              <div class="card__face-front-topleft"></div>
+              <div class="card__face-front-bottomright"></div>
+              <div class="card__front-design"></div>
+            </div>
+            <div class="card__face card__face-back">
+              <div class="card__back-design"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-space">
+          <div id="5" class="card" data-card-value="">
+            <div class="card__face card__face-front">
+              <div class="card__face-front-topleft"></div>
+              <div class="card__face-front-bottomright"></div>
+              <div class="card__front-design"></div>
+            </div>
+            <div class="card__face card__face-back">
+              <div class="card__back-design"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-space">
+          <div id="6" class="card" data-card-value="">
+            <div class="card__face card__face-front">
+              <div class="card__face-front-topleft"></div>
+              <div class="card__face-front-bottomright"></div>
+              <div class="card__front-design"></div>
+            </div>
+            <div class="card__face card__face-back">
+              <div class="card__back-design"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-space">
+          <div id="7" class="card" data-card-value="">
+            <div class="card__face card__face-front">
+              <div class="card__face-front-topleft"></div>
+              <div class="card__face-front-bottomright"></div>
+              <div class="card__front-design"></div>
+            </div>
+            <div class="card__face card__face-back">
+              <div class="card__back-design"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-space">
+          <div id="8" class="card" data-card-value="">
+            <div class="card__face card__face-front">
+              <div class="card__face-front-topleft"></div>
+              <div class="card__face-front-bottomright"></div>
+              <div class="card__front-design"></div>
+            </div>
+            <div class="card__face card__face-back">
+              <div class="card__back-design"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-space">
+          <div id="9" class="card" data-card-value="">
+            <div class="card__face card__face-front">
+              <div class="card__face-front-topleft"></div>
+              <div class="card__face-front-bottomright"></div>
+              <div class="card__front-design"></div>
+            </div>
+            <div class="card__face card__face-back">
+              <div class="card__back-design"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-space">
+          <div id="10" class="card" data-card-value="">
+            <div class="card__face card__face-front">
+              <div class="card__face-front-topleft"></div>
+              <div class="card__face-front-bottomright"></div>
+              <div class="card__front-design"></div>
+            </div>
+            <div class="card__face card__face-back">
+              <div class="card__back-design"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-space">
+          <div id="11" class="card" data-card-value="">
+            <div class="card__face card__face-front">
+              <div class="card__face-front-topleft"></div>
+              <div class="card__face-front-bottomright"></div>
+              <div class="card__front-design"></div>
+            </div>
+            <div class="card__face card__face-back">
+              <div class="card__back-design"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./memory-game-script-v2.js"></script>
+  </body>
+</html>
